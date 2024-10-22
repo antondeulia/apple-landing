@@ -2,6 +2,7 @@ import Features from "./components/Features";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HighLights from "./components/HighLights";
+import HowItWorks from "./components/HowItWorks";
 import Model from "./components/Model";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <HighLights />
       <Model />
       <Features />
+      <HowItWorks />
     </main>
   );
 };
