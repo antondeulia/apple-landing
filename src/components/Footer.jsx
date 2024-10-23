@@ -23,12 +23,12 @@ const Footer = () => {
           <p className="font-semibold text-gray text-xs">
             Copyright @ 2024 Apple Inc. All rights reserved.
           </p>
-          <div className="flex">
+          <div className="flex flex-wrap md:flex-nowrap gap-2 mt-2">
             {footerLinks.map((link, i) => (
-              <p key={link} className="font-semibold text-gray text-xs">
-                {link}{" "}
+              <p key={link} className="font-semibold text-gray text-xs flex ">
+                <span>{link}</span>{" "}
                 {i !== footerLinks.length - 1 && (
-                  <span className="mx-2">|</span>
+                  <span className="mx-2 hidden md:block">|</span>
                 )}
               </p>
             ))}

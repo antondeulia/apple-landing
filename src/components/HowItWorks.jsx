@@ -9,21 +9,26 @@ const HowItWorks = () => {
 
   useGSAP(() => {
     gsap.from("#chip", {
-      scrollTrigger: {
-        trigger: "#chip",
-        start: "20% bottom",
-      },
       opacity: 0,
       scale: 2,
       duration: 2,
       ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: "#chip",
+        start: "20% bottom",
+      },
     });
 
-    animateWithGsap(".g_fadeIn", {
+    gsap.to(".g_fadeIn", {
       opacity: 1,
       y: 0,
       duration: 1,
       ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".g_fadeIn",
+        toggleActions: "restart reverse restart reverse",
+        start: "top 105%",
+      },
     });
   }, []);
 
